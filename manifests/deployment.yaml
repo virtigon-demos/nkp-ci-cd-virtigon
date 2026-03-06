@@ -17,6 +17,8 @@ spec:
       containers:
         - name: nkp-demo
           image: ghcr.io/virtigon-demos/nkp-ci-cd-virtigon:v202603021217
+          securityContext:
+            runAsNonRoot: true
           ports:
             - containerPort: 8080
           env:
