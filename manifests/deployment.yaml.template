@@ -17,6 +17,9 @@ spec:
       containers:
         - name: nkp-demo
           image: ghcr.io/__ORG__/__REPO_NAME__:__BUILD_VERSION__
+          securityContext:
+            runAsUser: 1000
+            runAsNonRoot: true 
           ports:
             - containerPort: 8080
           env:
